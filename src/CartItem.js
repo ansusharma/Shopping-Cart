@@ -13,6 +13,7 @@ class CartItem extends React.Component {
 
 
     render() {
+        const {price,title,quantity}=this.state
         return (
             <div className="cart-item">
                 <div className="left-block">
@@ -20,9 +21,9 @@ class CartItem extends React.Component {
 
                 </div>
                     <div className="right-block">
-                        <div style={{fontSize: 35}}>{this.state.title}</div>
-                        <div style={{color: '#a81e4a'}}>Rs 9500</div>
-                        <div style={{color: '#1e7fa8'}}>Quantity:1</div>
+                        <div style={{fontSize: 35}}>{title}</div>
+                        <div style={{color: '#a81e4a'}}>Rs {price}</div>
+                        <div style={{color: '#1e7fa8'}}> Quantity: {quantity}</div>
                         <div className="cart-item-actions">
                             {/* buttons */}
                             <img alt="increase" className="action-icons" src="https://image.flaticon.com/icons/png/128/1828/1828926.png"/>
