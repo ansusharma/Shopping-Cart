@@ -1,5 +1,17 @@
 import React from 'react';
 class CartItem extends React.Component {
+    constructor () {
+        super();
+        this.state = {
+            price: 500,
+            title: 'Mobile Phone',
+            quantity: 2,
+            img: ''
+            
+        }
+    }
+
+
     render() {
         return (
             <div className="cart-item">
@@ -8,11 +20,14 @@ class CartItem extends React.Component {
 
                 </div>
                     <div className="right-block">
-                        <div style={{fontSize: 35}}>phone</div>
+                        <div style={{fontSize: 35}}>{this.state.title}</div>
                         <div style={{color: '#a81e4a'}}>Rs 9500</div>
                         <div style={{color: '#1e7fa8'}}>Quantity:1</div>
                         <div className="cart-item-actions">
                             {/* buttons */}
+                            <img alt="increase" className="action-icons" src="https://image.flaticon.com/icons/png/128/1828/1828926.png"/>
+                            <img alt="decrease" className="action-icons" src="https://image.flaticon.com/icons/png/128/992/992683.png"/>
+                            <img alt="delete" className="action-icons" src="https://image.flaticon.com/icons/png/128/1214/1214428.png"/>
 
                         </div>
 
